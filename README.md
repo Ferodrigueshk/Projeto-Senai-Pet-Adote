@@ -25,9 +25,13 @@ O objetivo do sistema é servir como uma plataforma simples e intuitiva para fac
 
 ## 📁 Estrutura do Projeto
 /Projeto-Senai-Pet-Adote
+
 │── /img → imagens do projeto
+
 │── /css → estilos CSS
+
 │── /js → scripts JavaScript
+
 │── index.html → página principal
 
 ## 🎯 Objetivo do Sistema
