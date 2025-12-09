@@ -1,0 +1,128 @@
+/* RESET BÁSICO */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: fonte-titulo;
+  src: url(../util/fonts/Vaseline\ Extra.ttf);
+}
+
+body {
+  /* Propriedades de Fundo (Combinadas em um único bloco) */
+  background-image: url(../img/bg-index.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  /* Propriedades de Centralização (Combinadas em um único bloco) */
+  min-height: 100vh;
+  /* 'min-width: 100vh;' foi removido pois causa comportamento inesperado; 
+       'background-size: cover' já garante que o fundo cubra a largura. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-principal {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-centro {
+  width: 350px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+  font-family: fonte-titulo;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #b565a7;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family: fonte-titulo;
+}
+
+.chamada {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.botao-pets {
+  background-color: #e6e0eb;
+  color: #333;
+  font-size: 1.1rem;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background-color 0.3s;
+}
+
+.botao-pets:hover {
+  background-color: #d3cde2;
+}
+
+/* MEDIA QUERIES PARA RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .logo-centro {
+    width: 250px;
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .chamada {
+    font-size: 1.2rem;
+  }
+
+  .botao-pets {
+    padding: 8px 25px;
+    font-size: 1rem;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-centro {
+    width: 200px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .chamada {
+    font-size: 1rem;
+  }
+
+  body {
+    padding: 10px;
+  }
+}
