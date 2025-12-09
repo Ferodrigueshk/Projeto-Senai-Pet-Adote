@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+/* <<<<<<< HEAD */
 header{
     background: #f8d38d ;
     display: flex;
@@ -49,7 +49,7 @@ button{
     font-size: 1rem;
     cursor: pointer;
 }
-=======
+
 /* RESET BÁSICO */
 * {
   padding: 0;
@@ -158,4 +158,4 @@ h2 {
     padding: 10px;
   }
 }
->>>>>>> 62206d86fdc21a83a94b789c0c1b0c47e679af09
+/* >>>>>>> 62206d86fdc21a83a94b789c0c1b0c47e679af09 */
