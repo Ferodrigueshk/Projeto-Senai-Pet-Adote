@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+@font-face {
+  font-family: fonte-titulo;
+  src: url(../util/font/Vaseline\ Extra.ttf);
+}
+
 header{
     background: #f8d38d ;
     display: flex;
@@ -19,12 +24,12 @@ nav{
     gap: 4rem;
     align-items: center;
     margin-left: 2rem; 
-    font-weight: bold;
-    font-size: 1.4rem; 
+    font-size: 1.6rem; 
 }
 a{
     text-decoration: none;
     color: #b94d9d;
+    font-family: fonte-titulo;
 }
 img{
     width: 7rem;
@@ -47,10 +52,10 @@ img{
 button{
     background: #b94d9d;
     color: #f8d38d;
-    font-weight: bold;
     border: none;
-    padding: 1rem 1.2rem;
+    padding: 1rem 1.3rem;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.3rem;
     cursor: pointer;
+    font-family: fonte-titulo;
 }
