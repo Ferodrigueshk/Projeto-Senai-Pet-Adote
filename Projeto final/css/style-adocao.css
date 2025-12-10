@@ -344,3 +344,16 @@ p{
 .btn-adotar:hover {
   background: #eabf72;
 }
+
+@media (max-width: 768px) {
+  .cards-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .cards-container {
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+}
