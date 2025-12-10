@@ -1,137 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adote um Pet</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style-adocao.css" />
-</head>
-
-<body>
-
-    <!-- HEADER -->
-    <header>
-        <nav>
-            <img src="img/logoPet.png" alt="Logo Pet" />
-            <a href="#">Home</a>
-            <a href="#">Adotar</a>
-            <a href="#">Cadastrar Pet</a>
-            <a href="#">Sobre</a>
-        </nav>
-    </header>
-
-    <!-- CONTEÚDO PRINCIPAL -->
-    <main>
-
-        <!-- CARD -->
-        <div class="card">
-            <div class="card-img">
-                <img src="img/cat-01.png" alt="Gato para adoção" />
-                <span class="favorite">❤</span>
-            </div>
-
-            <div class="card-content">
-                <h3>Kiki</h3>
-                <span class="tag">Fêmea, 9 meses</span>
-
-                <p class="title">Abrigado em:</p>
-                <p>ONG Patas Unidas</p>
-
-                <ul class="infos">
-                    <br>
-                    <br>
-                    <br>
-                    <!-- <li>👨‍👩‍👧 Aceita crianças</li> -->
-                    <!-- <li>🐾 Aceita outros animais</li> -->
-                    <!-- <li>⚡ Tem bastante energia</li> -->
-                </ul>
-
-                <button class="btn-adotar">Adote-me</button>
-            </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Adote um Pet</title>
+        <link rel="stylesheet" href="css/style-adocao.css">
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header>
+            <nav class="navbar">
+                <img src="img/logoPet.png" alt="Logo do site" class="logo">
+                <a href="#">Home</a>
+                <a href="#">Adotar</a>
+                <a href="#">Cadastrar Pet</a>
+                <a href="#">Sobre</a>
+            </nav>
+        </header>
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="container">
+            <!-- CARD FEMEA -->
+            <article class="card">
+                <div class="card-img">
+                    <img src="img/cat-01.png" alt="Gato Kiki">
+                    <input type="checkbox" class="favorite">
+                </div>
+                <div class="card-content">
+                    <h3>Kiki</h3>
+                    <span class="tag fêmea">Fêmea, 9 meses</span>
+                    <p class="title">Abrigado em:</p>
+                    <p>ONG Patas Unidas</p>
+                    <ul class="infos">
+                        <li>👨‍👩‍👧 Aceita crianças</li>
+                        <li>🐾 Aceita outros animais</li>
+                        <li>⚡ Energia alta</li>
+                    </ul>
+                    <button class="btn-adotar">Adote-me</button>
+                </div>
+            </article>
+            <!-- CARD MACHO -->
+            <article class="card macho">
+                <div class="card-img">
+                    <img src="img/dog-01.png" alt="Cachorro Fred">
+                    <input type="checkbox" class="favorite">
+                </div>
+                <div class="card-content">
+                    <h3>Fred</h3>
+                    <span class="tag macho-tag">Macho, 10 meses</span>
+                    <p class="title">Abrigado em:</p>
+                    <p>ONG Resgate Canino</p>
+                    <ul class="infos">
+                        <li>👨‍👩‍👧 Aceita crianças</li>
+                        <li>🐾 Aceita outros animais</li>
+                        <li>💤 Tranquilo</li>
+                    </ul>
+                    <button class="btn-adotar">Adote-me</button>
+                </div>
+            </article>
+            <!-- CARD FEMEA -->
+            <article class="card">
+                <div class="card-img">
+                    <img src="img/cat-02.png" alt="Gata Fiona">
+                    <input type="checkbox" class="favorite">
+                </div>
+                <div class="card-content">
+                    <h3>Fiona</h3>
+                    <span class="tag fêmea">Fêmea, 5 anos</span>
+                    <p class="title">Abrigado em:</p>
+                    <p>ONG Amaris</p>
+                    <ul class="infos">
+                        <li>👨‍👩‍👧 Aceita crianças</li>
+                        <li>🐾 Aceita outros animais</li>
+                        <li>💤 Tranquila</li>
+                    </ul>
+                    <button class="btn-adotar">Adote-me</button>
+                </div>
+            </article>
+            <!-- CARD FEMEA -->
+            <article class="card">
+                <div class="card-img">
+                    <img src="img/dog-02.png" alt="Cachorra Mel">
+                    <input type="checkbox" class="favorite">
+                </div>
+                <div class="card-content">
+                    <h3>Mel</h3>
+                    <span class="tag fêmea">Fêmea, 10 anos</span>
+                    <p class="title">Abrigado em:</p>
+                    <p>ONG Abrigo Amigo</p>
+                    <ul class="infos">
+                        <li>👨‍👩‍👧 Aceita crianças</li>
+                        <li>🐾 Aceita outros animais</li>
+                        <li>🔥 Agitada</li>
+                    </ul>
+                    <button class="btn-adotar">Adote-me</button>
+                </div>
+            </article>
+        </main>
+        <!-- BOTÃO CADASTRE-SE -->
+        <div class="cadastro-wrapper">
+            <button class="btn-cadastrar">Cadastre seu pet</button>
         </div>
-
-        <div class="card">
-            <div class="card-img">
-                <img src="img/dog-01.png" alt="Gato para adoção" />
-                <span class="favorite">❤</span>
-            </div>
-
-            <div class="card-content">
-                <h3>Kiki</h3>
-                <span class="tag">Fêmea, 9 meses</span>
-
-                <p class="title">Abrigado em:</p>
-                <p>ONG Patas Unidas</p>
-
-                <ul class="infos">
-                    <br>
-                    <br>
-                    <br>
-                    <!-- <li>👨‍👩‍👧 Aceita crianças</li> -->
-                    <!-- <li>🐾 Aceita outros animais</li> -->
-                    <!-- <li>⚡ Tem bastante energia</li> -->
-                </ul>
-
-                <button class="btn-adotar">Adote-me</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-img">
-                <img src="img/cat-02.png" alt="Gato para adoção" />
-                <span class="favorite">❤</span>
-            </div>
-
-            <div class="card-content">
-                <h3>Kiki</h3>
-                <span class="tag">Fêmea, 9 meses</span>
-
-                <p class="title">Abrigado em:</p>
-                <p>ONG Patas Unidas</p>
-
-                <ul class="infos">
-                    <br>
-                    <br>
-                    <br>
-                    <!-- <li>👨‍👩‍👧 Aceita crianças</li> -->
-                    <!-- <li>🐾 Aceita outros animais</li> -->
-                    <!-- <li>⚡ Tem bastante energia</li> -->
-                </ul>
-
-                <button class="btn-adotar">Adote-me</button>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="img/dog-02.png" alt="Gato para adoção" />
-                <span class="favorite">❤</span>
-            </div>
-
-            <div class="card-content">
-                <h3>Kiki</h3>
-                <span class="tag">Fêmea, 9 meses</span>
-
-                <p class="title">Abrigado em:</p>
-                <p>ONG Patas Unidas</p>
-
-                <ul class="infos">
-                    <br>
-                    <br>
-                    <br>
-                    <!-- <li>👨‍👩‍👧 Aceita crianças</li> -->
-                    <!-- <li>🐾 Aceita outros animais</li> -->
-                    <!-- <li>⚡ Tem bastante energia</li> -->
-                </ul>
-
-                <button class="btn-adotar">Adote-me</button>
-            </div>
-        </div>
-
-    </main>
-
-</body>
-
+    </body>
 </html>
