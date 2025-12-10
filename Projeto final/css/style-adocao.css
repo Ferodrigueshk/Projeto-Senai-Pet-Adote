@@ -52,20 +52,36 @@ header img {
 /* ----------------------------------------- */
 /* PRINCIPAL / CARDS                         */
 /* ----------------------------------------- */
+
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-  padding-top: 8vh;
+  position: relative;
+  width: 100%;
 }
 
-.bi{
+.cards-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding-top: 8vh;
+  position: relative;
+}
+
+.cards-container {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s ease;
+  overflow: hidden;
+  width: calc(20rem * 4 + 2rem * 3); 
+}
+
+.arrow-icon {
   font-size: 3rem;
   color: #f8d38d;
   cursor: pointer;
   align-self: center;
+  position: relative;
+  z-index: 10;
 }
 
 .card {
@@ -75,7 +91,6 @@ header img {
   border-radius: 1rem;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  /* border: 1px solid black; */
 }
 
 /* Fundo azul quando for macho */
