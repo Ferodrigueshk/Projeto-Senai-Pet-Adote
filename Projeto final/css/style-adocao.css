@@ -345,7 +345,37 @@ p {
   background: #eabf72;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1750px) {
+  .cards-wrapper {
+    gap: 2rem;
+  }
+
+  .cards-container {
+    width: auto;
+    align-items: center;
+  }
+
+  .card-content span {
+    font-size: 1.0rem;
+  }
+  .btn-ver-passaporte {
+    font-size: 0.8rem;
+  }
+  footer {
+    background: #f5f3ef;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 0%;
+    padding: 1.4rem;
+    font-size: 1.2rem;
+    align-items: baseline;
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 1435px) {
   .cards-wrapper {
     flex-direction: column;
     gap: 2rem;
@@ -355,6 +385,18 @@ p {
     width: auto;
     flex-direction: column;
     align-items: center;
+  }
+  footer {
+    background: #f5f3ef;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 0%;
+    padding: 1.4rem;
+    font-size: 1.2rem;
+    align-items: baseline;
+    position: fixed;
+    bottom: 0;
   }
 }
 
