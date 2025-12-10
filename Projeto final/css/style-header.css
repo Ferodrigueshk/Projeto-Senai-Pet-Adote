@@ -14,7 +14,6 @@ header{
     display: flex;
     width: 100%;
     height: 8vh;
-    position: fixed;
     align-items: center;
     justify-content: space-between;
 }
@@ -58,4 +57,64 @@ button{
     font-size: 1.3rem;
     cursor: pointer;
     font-family: fonte-titulo;
+}
+
+section{
+    margin-top: 10vh;
+    display: flex;
+    gap: 8rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgs{
+    display: flex;
+    flex-direction: column;
+}
+
+.imgs img{
+    width: 350px;
+    margin-bottom: 2rem;
+}
+
+.textos{
+    max-width: 1100px;
+    background: #E3D4E9;
+    margin-right: 4rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #333;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.textos h1{
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: #b94d9d;
+    font-family: fonte-titulo;
+    padding: 1rem;
+}
+
+.textos p{
+    font-weight: bold;
+    
+}
+
+@media (max-width: 768px){
+    section{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .imgs img{
+        width: 250px;
+        margin-bottom: 1rem;
+    }
+
+    .textos{
+        margin-right: 0;
+        font-size: 1.2rem;
+    }
 }
