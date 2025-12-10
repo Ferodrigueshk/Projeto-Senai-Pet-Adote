@@ -219,6 +219,7 @@ footer {
   bottom: 0%;
   padding: 1.4rem;
   font-size: 1.2rem;
+  align-items: baseline;
 }
 
 /* ----------------------------------------- */
@@ -269,7 +270,7 @@ p strong {
   font-size: 1.1rem;
 }
 
-p{
+p {
   font-size: 1.1rem;
 }
 
@@ -338,7 +339,6 @@ p{
   font-size: 1.2rem;
   cursor: pointer;
   transition: 0.3s;
-
 }
 
 .btn-adotar:hover {
@@ -355,5 +355,16 @@ p{
     width: auto;
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 90%;
+    height: auto;
+  }
+
+  .card-img img {
+    height: auto;
   }
 }
