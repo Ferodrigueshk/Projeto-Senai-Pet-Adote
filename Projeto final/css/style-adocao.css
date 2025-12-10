@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
 header {
   background: #f8d38d;
   display: flex;
@@ -24,5 +30,22 @@ nav {
 }
 a {
   text-decoration: none;
+  color: #b94d9d;
+}
+
+img {
+  width: 7rem;
+  margin-left: 2rem;
+  margin-top: 2.5rem;
+}
+
+.end {
+  margin-right: 5rem;
+  align-items: center;
+  align-items: end;
+}
+
+.bi {
+  font-size: 2rem;
   color: #b94d9d;
 }
