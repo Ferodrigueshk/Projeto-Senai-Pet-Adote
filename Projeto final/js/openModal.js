@@ -34,10 +34,7 @@ function PassportHTML(passport) {
         </div>
       </div>
        <button class="btn-adotar">Adote-me</button>
-      
     </div>
-
-
   `;
 }
 

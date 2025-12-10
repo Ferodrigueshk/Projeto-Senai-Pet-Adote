@@ -13,7 +13,6 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
   background: #fafafa;
 }
 
@@ -54,8 +53,11 @@ header img {
 /* ----------------------------------------- */
 
 .container {
+  font-family: "Poppins", sans-serif;
   position: relative;
-  width: 100%;
+  width: 75%;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 .cards-wrapper {
@@ -86,7 +88,7 @@ header img {
 
 .card {
   width: 19rem;
-  height: 30rem;
+  height: 32rem;
   background: #e8d3ef;
   border-radius: 1rem;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
@@ -170,15 +172,15 @@ header img {
 
 /* Botão Adotar */
 .btn-ver-passaporte {
-  margin-top: 0.5rem;
   padding: 0.9rem;
   border: none;
   border-radius: 0.4rem;
   background: #f8d38d;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: 0.3s;
+  align-items: baseline;
 }
 
 .btn-ver-passaporte:hover {
@@ -216,6 +218,7 @@ footer {
   position: absolute;
   text-align: center;
   width: 100%;
+  bottom: 0%;
   padding: 1.4rem;
   font-size: 1.2rem;
 }
@@ -236,6 +239,7 @@ footer {
   border-radius: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1001;
+  display: none;
 }
 
 .overlay {
@@ -265,6 +269,10 @@ footer {
 }
 
 p strong {
+  font-size: 1.1rem;
+}
+
+p{
   font-size: 1.1rem;
 }
 
@@ -325,6 +333,7 @@ p strong {
 }
 
 .btn-adotar {
+  display: flex;
   margin-top: 0.5rem;
   padding: 1rem 5rem;
   border: none;
@@ -334,6 +343,7 @@ p strong {
   font-size: 1.2rem;
   cursor: pointer;
   transition: 0.3s;
+
 }
 
 .btn-adotar:hover {
