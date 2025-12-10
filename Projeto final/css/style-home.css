@@ -42,12 +42,6 @@ img{
     align-items: end;
 }
 
-
-.bi{
-    font-size: 2rem;
-    color: #b94d9d;
-}
-
 button{
     background: #b94d9d;
     color: #f8d38d;
@@ -100,6 +94,16 @@ section{
 .textos p{
     font-weight: bold;
     
+}
+
+footer{
+    background: #f5f3ef;
+    position: absolute;
+    bottom:0%;
+    text-align: center;
+    width: 100%;
+    padding: 1.4rem;
+    font-size: 1.2rem;
 }
 
 @media (max-width: 768px){
