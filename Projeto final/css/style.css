@@ -58,8 +58,6 @@ h2 {
   line-height: 1.2;
 }
 
-
-
 /* MEDIA QUERIES PARA RESPONSIVIDADE */
 @media (max-width: 768px) {
   .logo-centro {
@@ -80,8 +78,6 @@ h2 {
   .chamada {
     font-size: 1.2rem;
   }
-
-  
 }
 
 @media (max-width: 480px) {
