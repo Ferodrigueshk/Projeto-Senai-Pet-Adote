@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: vaseline;
+    src: url(fonte/Vaseline\ Extra.ttf);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(img/fundo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo-oficial {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.titulo {
+    color: #b94d9d;
+    margin-bottom: 18px;
+    font-family: vaseline;
+    font-size: 22px;
+}
+
+.container {
+    background-color: white;
+    border: 8px solid #17ace3;
+    border-radius: 50px;
+
+    padding: 30px;
+    width: 500px;
+    text-align: center;
+
+    background-image: url(img/pata-fundo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-input,
+.campo-textarea {
+    background-color: #a282bb;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    color: #fff;
+    margin-top: 10px;
+    width: 100%;
+    outline: none;
+}
+
+.campo-input:focus,
+.campo-textarea:focus {
+    box-shadow: 0 0 8px #17ace3;
+}
+
+.campo-input::placeholder,
+.campo-textarea::placeholder {
+    color: white;
+}
+
+.campo-textarea {
+    height: 150px;
+    text-align: left;
+}
+
+small {
+    color: #555;
+    margin-top: 5px;
+    text-align: right;
+    display: block;
+}
+
+.botao-enviar {
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    background-color: #a282bb;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botao-enviar:hover {
+    background-color: #ddc2f1;
+}
+
+.botao-enviar:active {
+    transform: scale(0.95);
+}
