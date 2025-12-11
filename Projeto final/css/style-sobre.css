@@ -28,10 +28,6 @@ h1{
     margin-bottom: 2rem;
 }
 
-.img{
-   
-}
-
 .texto2{
     display: flex;
     align-items: center;
@@ -39,6 +35,7 @@ h1{
 }
 
 .texto2 div{
+    background: white;
     border: 2px solid #b94d9d;
     border-radius: 0.8rem;
     padding: 2rem;
@@ -91,6 +88,23 @@ header img{
     width: 7rem;
     margin-left: 2rem;
     margin-top: 2.5rem;
+}
+
+.end{ 
+    margin-right: 5rem;
+    align-items: center;  
+    align-items: end;
+}
+
+button{
+    background: #b94d9d;
+    color: #f8d38d;
+    border: none;
+    padding: 1rem 1.3rem;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-family: fonte-titulo;
 }
 
 footer {

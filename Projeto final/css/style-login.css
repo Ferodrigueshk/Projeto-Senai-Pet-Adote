@@ -27,24 +27,26 @@ body {
   border: 6px solid #17ace3;
   border-radius: 60px;
   padding: 30px;
-  width: 700px;
+  width: 550px;
   text-align: center;
-  background-image: url(img/img-back-pata-form.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
 }
 
-.logo-oficial {
+.container p {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.logo {
   width: 130px;
   margin-bottom: 20px;
 }
 
-h2 {
+h1 {
   color: #b94d9d;
   margin-bottom: 30px;
   font-family: vaseline;
-  font-size: 45px;
+  font-size: 3.3rem;
   font-weight: 400;
 }
 
@@ -77,18 +79,6 @@ textarea::placeholder {
   font-weight: bold;
 }
 
-.ultimo-espaco {
-  height: 150px;
-  padding: 15px;
-  text-align: left;
-}
-
-small {
-  color: #555;
-  margin-top: 5px;
-  text-align: right;
-}
-
 button {
   margin-top: 15px;
   padding: 20px 0px;
@@ -115,16 +105,6 @@ button:active {
 .carregando {
   opacity: 0.6;
   pointer-events: none;
-}
-
-#mensagem {
-  margin-top: 15px;
-  font-weight: bold;
-}
-
-#contador{
-  font-weight: 800;
-  font-size: 1rem;
 }
 
 input::placeholder{

@@ -11,14 +11,14 @@ function PassportHTML(passport) {
     <div class="modal-passaporte">
     <div class="top-detail"> 
         <span class="close" role="button" onclick="closePassaporte()" aria-label="Fechar">&times;</span>
-        <span class="favorite" role="button" onclick="salvarPassaporte(${passport.id})" title="Salvar"><i class="bi bi-suit-heart-fill" id="favoriteIcon"></i></span>
+        <span class="favorite" role="button" onclick="salvarPassaporte(${passport.id})" title="Salvar"><i class="heart-icon bi bi-suit-heart-fill" id="favoriteIcon"></i></span>
       </div>
 
       <span class="top-name">${passport.name}</span>
 
       <div class="info">
         <div class="passport-photo">
-          <img src="${passport.photo || 'img/cat-01.png'}" alt="Foto de ${passport.name}">
+          <img src="${passport.photo || "img/cat-01.png"}" alt="Foto de ${passport.name}">
         </div>
 
         <div class="passport-info">
@@ -58,6 +58,21 @@ function showPassaporteById(passportId) {
   });
 }
 
+const icons = document.querySelectorAll(".heart-icon");
+
+icons.forEach(icon => {
+  icon.addEventListener("click", function () {
+    if (this.classList.contains("favorito")) {
+      this.classList.remove("favorito");
+      alert("Pet removido dos favoritos!");
+    } 
+    else {
+      this.classList.add("favorito");
+      alert("Pet salvo!");
+    }
+  });
+});
+
 function openModal() {
   overlay.style.display = "block";
   detalhesPassaporte.style.display = "block";
@@ -77,13 +92,17 @@ function closePassaporte() {
   if (!visible) return;
   if (animation) {
     animation.reverse();
-    animation.addEventListener("finish", () => {
-      overlay.style.display = "none";
-      detalhesPassaporte.style.display = "none";
-      detalhesPassaporte.innerHTML = ""; 
-      detalhesPassaporte.setAttribute("aria-hidden", "true");
-      animation = null;
-    }, { once: true });
+    animation.addEventListener(
+      "finish",
+      () => {
+        overlay.style.display = "none";
+        detalhesPassaporte.style.display = "none";
+        detalhesPassaporte.innerHTML = "";
+        detalhesPassaporte.setAttribute("aria-hidden", "true");
+        animation = null;
+      },
+      { once: true }
+    );
   } else {
     overlay.style.display = "none";
     detalhesPassaporte.style.display = "none";
@@ -103,9 +122,21 @@ function escKeyHandler(e) {
 function fetchPassaporteById(id) {
   // retorna Promise para imitar fetch ou pokeApi.getPokemonByID
   return new Promise((resolve) => {
-    // dados de exemplo 
+    // dados de exemplo
     const fakeDB = {
-      "123": { id: 123, photo: "img/cat-01.png", name: "kiki", tipo: "gato", raça: "viralata", cor: "Branca", idade: "3 anos", sexo: "femea", porte: "pequeno", descrição:" Uma gatinha muito carinhosa e brincalhona, procura um lar cheio de amor." },
+      123: {
+        id: 123,
+        photo: "img/cat-01.png",
+        name: "kiki",
+        tipo: "gato",
+        raça: "viralata",
+        cor: "Branca",
+        idade: "3 anos",
+        sexo: "femea",
+        porte: "pequeno",
+        descrição:
+          " Uma gatinha muito carinhosa e brincalhona, procura um lar cheio de amor.",
+      },
     };
     setTimeout(() => resolve(fakeDB[id] || null), 150); // imita latência
   });
@@ -113,7 +144,7 @@ function fetchPassaporteById(id) {
 
 /* Inicialização: adiciona evento para todos os botões .btn-ver-passaporte */
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".btn-ver-passaporte").forEach(btn => {
+  document.querySelectorAll(".btn-ver-passaporte").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       const id = btn.dataset.id;
       if (id) showPassaporteById(id);
