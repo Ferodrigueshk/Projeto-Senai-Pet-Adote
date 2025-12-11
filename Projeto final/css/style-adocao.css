@@ -88,7 +88,6 @@ header img {
   gap: 2rem;
   transition: transform 0.5s ease;
   overflow: hidden;
-  width: calc(20rem * 4 + 2rem * 3);
 }
 
 .arrow-icon {
@@ -102,7 +101,7 @@ header img {
 
 .card {
   width: 19rem;
-  height: 30rem;
+  height: 31.5rem;
   background: #e8d3ef;
   border-radius: 1rem;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
@@ -112,10 +111,6 @@ header img {
 /* Fundo azul quando for macho */
 .card.macho {
   background: #44b7e0;
-}
-
-.card-img {
-  position: relative;
 }
 
 .card-img img {
@@ -402,7 +397,6 @@ p {
     position: absolute;
     text-align: center;
     width: 100%;
-    bottom: 0%;
     padding: 1.4rem;
     font-size: 1.2rem;
     align-items: baseline;
