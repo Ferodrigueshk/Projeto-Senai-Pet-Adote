@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: vaseline;
+  src: url(../util/font/Vaseline\ Extra.ttf);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: white;
+  border: 8px solid #17ace3;
+  border-radius: 65px;
+
+  padding: 50px;
+  width: 700px;
+  text-align: center;
+
+  background-image: url(img/img-back-pata-form.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.logo-oficial {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #b94d9d;
+  margin-bottom: 30px;
+  font-family: vaseline;
+  font-size: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  background-color: #a282bb;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  color: #fff;
+  margin-top: 10px;
+  width: 100%;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 8px #17ace3;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: white;
+}
+
+.ultimo-espaco {
+  height: 150px;
+  padding: 15px;
+  text-align: left;
+}
+
+small {
+  color: #555;
+  margin-top: 5px;
+  text-align: right;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  background-color: #a282bb;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #ddc2f1;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.carregando {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+#mensagem {
+  margin-top: 15px;
+  font-weight: bold;
+}
