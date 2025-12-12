@@ -1,4 +1,17 @@
+const icons = document.querySelectorAll(".heart-icon");
 
+icons.forEach(icon => {
+  icon.addEventListener("click", function () {
+    if (this.classList.contains("favorito")) {
+      this.classList.remove("favorito");
+      alert("Pet removido dos favoritos!");
+    } 
+    else {
+      this.classList.add("favorito");
+      alert("Pet salvo!");
+    }
+  });
+});
 
 // função de carrossel
 const container = document.querySelector(".cards-container");

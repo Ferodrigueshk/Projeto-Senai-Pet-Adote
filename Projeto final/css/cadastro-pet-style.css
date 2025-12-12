@@ -16,32 +16,32 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url(../img/fundo.png);
+  background-image: url(../img/bg-index.png);
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
 }
 
 .logo-oficial {
   width: 9rem;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .titulo {
-  color: #b94d9d;
-  margin-bottom: 18px;
-  font-family: vaseline;
-  font-size: 3rem;
+   color: #b94d9d;
+   margin-bottom: 30px;
+   font-family: vaseline;
+   font-size: 45px;
+   font-weight: 400;
 }
 
 .container {
   background-color: white;
-  border: 8px solid #17ace3;
+  border: 6px solid #17ace3;
   border-radius: 50px;
-
   padding: 30px;
-  width: 500px;
+  width: 550px;
   text-align: center;
-
   background-image: url(img/pata-fundo.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -78,6 +78,8 @@ form {
 .campo-textarea {
   height: 150px;
   text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 small {
@@ -87,22 +89,35 @@ small {
   display: block;
 }
 
-.botao-enviar {
-  margin-top: 20px;
-  padding: 12px;
+button {
+  margin-top: 15px;
+  padding: 15px 0px;
   border: none;
-  border-radius: 20px;
-  background-color: #a282bb;
-  color: white;
   font-weight: bold;
+  font-size: 1rem;
+  border-radius: 10px;
+  background-color: #b94d9d;
+  color: white;
   cursor: pointer;
   transition: 0.2s;
+  width: 50%;
+  align-self: center;
 }
 
-.botao-enviar:hover {
-  background-color: #ddc2f1;
+button:hover {
+  background-color: #ec7be3;
 }
 
 .botao-enviar:active {
   transform: scale(0.95);
+}
+
+#contador{
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+input::placeholder{
+  font-weight: bold;
+  font-size: 1rem;
 }

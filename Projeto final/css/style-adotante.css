@@ -27,7 +27,7 @@ body {
   border: 6px solid #17ace3;
   border-radius: 60px;
   padding: 30px;
-  width: 700px;
+  width: 650px;
   text-align: center;
   background-image: url(img/img-back-pata-form.png);
   background-repeat: no-repeat;
@@ -91,7 +91,7 @@ small {
 
 button {
   margin-top: 15px;
-  padding: 20px 0px;
+  padding: 18px 0px;
   border: none;
   font-weight: bold;
   font-size: 1rem;

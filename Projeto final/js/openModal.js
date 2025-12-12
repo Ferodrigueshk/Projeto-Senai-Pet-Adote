@@ -47,7 +47,7 @@ function fadeActivate() {
 }
 
 function showPassaporteById(passportId) {
-  if (visible) return; // evita abrir duas vezes
+  if (visible) return; 
 
   fetchPassaporteById(passportId).then((data) => {
     if (!data) return;
@@ -57,21 +57,6 @@ function showPassaporteById(passportId) {
     openModal();
   });
 }
-
-const icons = document.querySelectorAll(".heart-icon");
-
-icons.forEach(icon => {
-  icon.addEventListener("click", function () {
-    if (this.classList.contains("favorito")) {
-      this.classList.remove("favorito");
-      alert("Pet removido dos favoritos!");
-    } 
-    else {
-      this.classList.add("favorito");
-      alert("Pet salvo!");
-    }
-  });
-});
 
 function openModal() {
   overlay.style.display = "block";
