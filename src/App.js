@@ -37,7 +37,7 @@ function App() {
   return (
     <div className="App">
       <AuthProvider value={{ user }}>
-        <BrowserRouter>
+        <BrowserRouter basename="/Projeto-Senai-Pet-Adote">
           <Navbar />
           <div className="container">
             <Routes>

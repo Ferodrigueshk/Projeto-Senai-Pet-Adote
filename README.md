@@ -54,8 +54,20 @@ Este projeto foi desenvolvido como parte da formação em **Front-End no SENAI**
 Este projeto é apenas para fins educacionais.  
 Distribuição e uso comercial não são recomendados.
 
----
 
 ## 💡 Autor
 
 Desenvolvido por
+
+### Deploy (GitHub Pages)
+
+- Este projeto é configurado para ser implantado no GitHub Pages em: `https://Ferodrigueshk.github.io/Projeto-Senai-Pet-Adote`.
+- Há um fluxo de trabalho do GitHub Actions que compila e implanta automaticamente ao fazer push para `main` (`.github/workflows/deploy.yml`).
+- Localmente, você também pode implantar usando o pacote `gh-pages` com:
+
+```powershell
+npm ci
+npm run deploy
+```
+
+Nota: Certifique-se de que o `homepage` do seu `package.json` esteja definido para o caminho das páginas do repositório (já definido). Se você preferir uma página de usuário (`username.github.io`), deve implantar no repositório nomeado `username.github.io` em vez disso.
