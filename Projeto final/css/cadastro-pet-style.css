@@ -28,11 +28,11 @@ body {
 }
 
 .titulo {
-   color: #b94d9d;
-   margin-bottom: 30px;
-   font-family: vaseline;
-   font-size: 45px;
-   font-weight: 400;
+  color: #b94d9d;
+  margin-bottom: 30px;
+  font-family: vaseline;
+  font-size: 45px;
+  font-weight: 400;
 }
 
 .container {
@@ -112,12 +112,12 @@ button:hover {
   transform: scale(0.95);
 }
 
-#contador{
+#contador {
   font-weight: 800;
   font-size: 1rem;
 }
 
-input::placeholder{
+input::placeholder {
   font-weight: bold;
   font-size: 1rem;
 }

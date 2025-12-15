@@ -11,7 +11,7 @@ let mensagem = document.getElementById("mensagem");
 
 /* ✅ Contador de caracteres para descrição */
 descricao.addEventListener("input", () => {
-    contador.textContent = `${descricao.value.length} / 300`;
+  contador.textContent = `${descricao.value.length} / 300`;
 });
 
 /* ✅ Limite de caracteres */
@@ -19,31 +19,28 @@ descricao.maxLength = 300;
 
 /* ✅ Validação + mensagem de sucesso */
 form.addEventListener("submit", (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (
-        nome.value === "" ||
-        raca.value === "" ||
-        idade.value === "" ||
-        especie.value === "" ||
-        vacinas.value === "" ||
-        descricao.value === ""
-    ) {
-        mensagem.textContent = "⚠️ Preencha todos os campos!";
-        mensagem.style.color = "red";
-        return;
-    }
+  if (
+    nome.value === "" ||
+    raca.value === "" ||
+    idade.value === "" ||
+    especie.value === "" ||
+    vacinas.value === "" ||
+    descricao.value === ""
+  ) {
+    mensagem.textContent = "⚠️ Preencha todos os campos!";
+    mensagem.style.color = "red";
+    return;
+  }
 
-    botao.classList.add("carregando");
+  botao.classList.add("carregando");
 
-    setTimeout(() => {
-        mensagem.textContent = "✅ Cadastro enviado com sucesso!";
-        mensagem.style.color = "green";
-        form.reset();
-        contador.textContent = "0 / 300";
-        botao.classList.remove("carregando");
-    }, 1500);
+  setTimeout(() => {
+    mensagem.textContent = "✅ Cadastro enviado com sucesso!";
+    mensagem.style.color = "green";
+    form.reset();
+    contador.textContent = "0 / 300";
+    botao.classList.remove("carregando");
+  }, 1500);
 });
-
-
-
