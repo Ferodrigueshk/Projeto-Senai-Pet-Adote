@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adote um Pet</title>
+
     <link rel="stylesheet" href="css/style-adocao.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
 <body>
+
     <header>
         <nav>
-            <img src="img/logoPet.png" alt="">
+            <img src="img/logoPet.png" alt="Logo Pet">
             <a href="home.html">Home</a>
             <a href="adocao.html">Adotar</a>
-            <a href="">cadastrar pet</a>
+            <a href="">Cadastrar pet</a>
             <a href="sobre.html">Sobre</a>
         </nav>
         <div class="end">
@@ -24,96 +27,18 @@
             </button>
         </div>
     </header>
-    <!-- CONTEÚDO PRINCIPAL -->
+
     <main class="container">
-        <!-- CARD FEMEA -->
+
         <div class="cards-wrapper">
             <i class="arrow-icon bi bi-arrow-left-circle-fill" id="arrowLeft"></i>
-            <div class="cards-container">
-                <article class="card">
-                    <div class="card-img">
-                        <img src="img/cat-01.png" alt="Gato Kiki">
-                        <i class="heart-icon bi bi-suit-heart-fill" id="favoriteIcon"></i>
-                    </div>
-                    <div class="card-content">
-                        <h1>Kiki</h1>
-                        <span class="tag fêmea">Fêmea, 9 meses</span>
-                        <br>
-                        <p class="title">Abrigado em:</p>
-                        <p>ONG Patas Unidas</p>
-                        <ul class="infos">
-                            <!-- <li>👨‍👩‍👧 Aceita crianças</li>
-                        <li>🐾 Aceita outros animais</li>
-                        <li>⚡ Energia alta</li> -->
-                        </ul>
-                        <button class="btn-ver-passaporte" data-id="123">Ver Passaporte Completo</button>
-                    </div>
-                </article>
-                <!-- CARD MACHO -->
-                <article class="card macho">
-                    <div class="card-img">
-                        <img src="img/dog-01.png" alt="Cachorro Fred">
-                        <i class="heart-icon bi bi-suit-heart-fill" id="favoriteIcon"></i>
-                    </div>
-                    <div class="card-content">
-                        <h1>Fred</h1>
-                        <span class="tag macho-tag">Macho, 10 meses</span>
-                        <br>
-                        <p class="title">Abrigado em:</p>
-                        <p>ONG Resgate Canino</p>
-                        <ul class="infos">
-                            <!-- <li>👨‍👩‍👧 Aceita crianças</li>
-                        <li>🐾 Aceita outros animais</li>
-                        <li>💤 Tranquilo</li> -->
-                        </ul>
-                        <button class="btn-ver-passaporte" data-id="456">Ver Passaporte Completo</button>
-                    </div>
-                </article>
-                <!-- CARD FEMEA -->
-                <article class="card">
-                    <div class="card-img">
-                        <img src="img/cat-02.png" alt="Gata Fiona">
-                        <i class="heart-icon bi bi-suit-heart-fill" id="favoriteIcon"></i>
-                    </div>
-                    <div class="card-content">
-                        <h1>Fiona</h1>
-                        <span class="tag fêmea">Fêmea, 5 anos</span>
-                        <br>
-                        <p class="title">Abrigado em:</p>
-                        <p>ONG Amaris</p>
-                        <ul class="infos">
-                            <!-- <li>👨‍👩‍👧 Aceita crianças</li>
-                        <li>🐾 Aceita outros animais</li>
-                        <li>💤 Tranquila</li> -->
-                        </ul>
-                        <button class="btn-ver-passaporte" data-id="456">Ver Passaporte Completo</button>
-                    </div>
-                </article>
-                <!-- CARD FEMEA -->
-                <article class="card">
-                    <div class="card-img">
-                        <img src="img/dog-02.png" alt="Cachorra Mel">
-                        <i class="heart-icon bi bi-suit-heart-fill" id="favoriteIcon"></i>
-                    </div>
-                    <div class="card-content">
-                        <h1>Mel</h1>
-                        <span class="tag fêmea">Fêmea, 10 anos</span>
-                        <br>
-                        <p class="title">Abrigado em:</p>
-                        <p>ONG Abrigo Amigo</p>
-                        <ul class="infos">
-                            <!-- <li>👨‍👩‍👧 Aceita crianças</li>
-                        <li>🐾 Aceita outros animais</li>
-                        <li>🔥 Agitada</li> -->
-                        </ul>
-                        <button class="btn-ver-passaporte" data-id="456">Ver Passaporte Completo</button>
-                    </div>
-                </article>
+            <div class="cards-container" id="cardsContainer">
             </div>
             <i class="arrow-icon bi bi-arrow-right-circle-fill" id="arrowRight"></i>
         </div>
+
     </main>
-    <!-- BOTÃO CADASTRE-SE -->
+
     <div class="cadastro-wrapper">
         <button class="btn-cadastrar">Cadastre seu pet</button>
     </div>
@@ -125,8 +50,9 @@
     <div id="overlay" class="overlay"></div>
     <div id="detalhesPassaporte" class="detalhesPokemon"></div>
 
+    <script src="js/ficha.js"></script>
     <script src="js/script.js"></script>
     <script src="js/openModal.js"></script>
-    
+
 </body>
 </html>

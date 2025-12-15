@@ -1,42 +1,85 @@
-// elementos principais
 const overlay = document.getElementById("overlay");
 const detalhesPassaporte = document.getElementById("detalhesPassaporte");
 
-let currentPassportId = null;
 let animation = null;
 let visible = false;
 
-function PassportHTML(passport) {
+function PassportHTML(pet) {
   return `
     <div class="modal-passaporte">
-    <div class="top-detail"> 
-        <span class="close" role="button" onclick="closePassaporte()" aria-label="Fechar">&times;</span>
-        <span class="favorite" role="button" onclick="salvarPassaporte(${passport.id})" title="Salvar"><i class="heart-icon bi bi-suit-heart-fill" id="favoriteIcon"></i></span>
+      <div class="top-detail">
+        <span class="close" role="button" onclick="closePassaporte()">&times;</span>
+        <span class="favorite" role="button" id="favoriteBtn">
+          <i class="heart-icon bi bi-suit-heart-fill"></i>
+        </span>
       </div>
 
-      <span class="top-name">${passport.name}</span>
+      <span class="top-name">${pet.name}</span>
 
       <div class="info">
         <div class="passport-photo">
-          <img src="${passport.photo || "img/cat-01.png"}" alt="Foto de ${passport.name}">
+          <img src="${pet.photo || "img/cat-01.png"}" alt="Foto de ${pet.name}">
         </div>
 
         <div class="passport-info">
           <div class="title">Informações</div>
-          <p><strong>Nome:</strong> ${passport.name}</p>
-          <p><strong>Tipo:</strong> ${passport.tipo}</p>
-          <p><strong>Raça:</strong> ${passport.raça}</p>
-          <p><strong>Cor:</strong> ${passport.cor}</p>
-          <p><strong>Idade:</strong> ${passport.idade}</p>
-          <p><strong>Sexo:</strong> ${passport.sexo}</p>
-          <p><strong>Porte:</strong> ${passport.porte}</p>
-          <p><strong>Descrição:</strong> ${passport.descrição}</p>
+          <p><strong>Tipo:</strong> ${pet.tipo}</p>
+          <p><strong>Raça:</strong> ${pet.raca}</p>
+          <p><strong>Cor:</strong> ${pet.cor}</p>
+          <p><strong>Idade:</strong> ${pet.idade}</p>
+          <p><strong>Sexo:</strong> ${pet.sexo}</p>
+          <p><strong>Porte:</strong> ${pet.porte}</p>
+          <p><strong>Descrição:</strong> ${pet.descricao}</p>
         </div>
       </div>
-       <button class="btn-adotar">Adote-me</button>
+
+      <button class="btn-adotar">Adote-me</button>
     </div>
   `;
 }
+
+
+const API_URL = "https://ominous-space-train-p75jq7j747rh979p-8080.app.github.dev/pets";
+
+async function fetchPetById(id) {
+  try {
+    const response = await fetch(`${API_URL}/${id}`);
+    if (!response.ok) throw new Error("Pet não encontrado");
+    return await response.json();
+  } catch (err) {
+    console.error(err);
+    return null;
+  }
+}
+
+
+async function showPassaporteById(id) {
+  if (visible) return;
+
+  const pet = await fetchPetById(id);
+  if (!pet) return;
+
+  detalhesPassaporte.innerHTML = PassportHTML(pet);
+  openModal();
+  ativarFavorito();
+}
+
+
+function ativarFavorito() {
+  const icon = document.querySelector(".heart-icon");
+  if (!icon) return;
+
+  icon.addEventListener("click", () => {
+    icon.classList.toggle("favorito");
+    alert(
+      icon.classList.contains("favorito")
+        ? "Pet salvo nos favoritos!"
+        : "Pet removido dos favoritos!"
+    );
+  });
+}
+
+
 
 const fade = [{ opacity: 0 }, { opacity: 1 }];
 const fadeTiming = { duration: 350, iterations: 1 };
@@ -44,18 +87,6 @@ const fadeTiming = { duration: 350, iterations: 1 };
 function fadeActivate() {
   if (animation) animation.cancel();
   animation = detalhesPassaporte.animate(fade, fadeTiming);
-}
-
-function showPassaporteById(passportId) {
-  if (visible) return; 
-
-  fetchPassaporteById(passportId).then((data) => {
-    if (!data) return;
-    currentPassportId = passportId;
-    const html = PassportHTML(data);
-    detalhesPassaporte.innerHTML = html;
-    openModal();
-  });
 }
 
 function openModal() {
@@ -103,36 +134,3 @@ function escKeyHandler(e) {
   if (e.key === "Escape") closePassaporte();
 }
 
-/* Simulação de fetch  */
-function fetchPassaporteById(id) {
-  // retorna Promise para imitar fetch ou pokeApi.getPokemonByID
-  return new Promise((resolve) => {
-    // dados de exemplo
-    const fakeDB = {
-      123: {
-        id: 123,
-        photo: "img/cat-01.png",
-        name: "kiki",
-        tipo: "gato",
-        raça: "viralata",
-        cor: "Branca",
-        idade: "3 anos",
-        sexo: "femea",
-        porte: "pequeno",
-        descrição:
-          " Uma gatinha muito carinhosa e brincalhona, procura um lar cheio de amor.",
-      },
-    };
-    setTimeout(() => resolve(fakeDB[id] || null), 150); // imita latência
-  });
-}
-
-/* Inicialização: adiciona evento para todos os botões .btn-ver-passaporte */
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".btn-ver-passaporte").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      const id = btn.dataset.id;
-      if (id) showPassaporteById(id);
-    });
-  });
-});
