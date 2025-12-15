@@ -1,0 +1,127 @@
+@font-face {
+  font-family: vaseline;
+  src: url(../../font/VaselineExtra.ttf);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(img/bg-index.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.logo {
+  width: 7.5rem;
+  margin-bottom: 5px;
+}
+
+.titulo {
+  color: #b94d9d;
+  margin-bottom: 10px;
+  font-family: vaseline;
+  font-size: 45px;
+  font-weight: 400;
+}
+
+.container {
+  background-color: white;
+  border: 6px solid #17ace3;
+  border-radius: 50px;
+  padding: 25px;
+  width: 650px;
+  text-align: center;
+  background-position: center;
+  background-size: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-input,
+.campo-textarea {
+  background-color: #a282bb;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  color: #fff;
+  margin-top: 10px;
+  width: 100%;
+  outline: none;
+}
+
+.linha {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.linha input {
+  flex: 1;
+}
+
+.campo-input:focus,
+.campo-textarea:focus {
+  box-shadow: 0 0 8px #17ace3;
+}
+
+.campo-input::placeholder,
+.campo-textarea::placeholder {
+  color: white;
+}
+
+.campo-textarea {
+  height: 100px;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+small {
+  color: #555;
+  margin-top: 5px;
+  text-align: right;
+  display: block;
+}
+
+.container button {
+  margin-top: 5px;
+  margin-left: 4rem;
+  padding: 15px 0px;
+  border: none;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  border-radius: 10px;
+  background-color: #b94d9d;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+  width: 50%;
+  align-self: center;
+}
+
+button:hover {
+  background-color: #ec7be3;
+}
+
+.botao-enviar:active {
+  transform: scale(0.95);
+}
+
+#contador {
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  font-weight: bold;
+  font-size: 1rem;
+}

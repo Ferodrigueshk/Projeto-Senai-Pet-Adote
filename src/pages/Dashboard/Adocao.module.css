@@ -1,0 +1,375 @@
+
+
+@font-face {
+  font-family: fonte-titulo;
+  src: url(../../font/VaselineExtra.ttf);
+}
+
+/* ----------------------------------------- */
+/* PRINCIPAL / CARDS                         */
+/* ----------------------------------------- */
+
+.container {
+    padding-top: 8rem;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  width: 75%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.cardsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding-top: 8vh;
+  position: relative;
+}
+
+.cardsContainer {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s ease;
+  overflow: hidden;
+}
+
+.arrowIcon {
+  font-size: 3rem;
+  color: #b94d9d;
+  cursor: pointer;
+  align-self: center;
+  position: relative;
+  z-index: 10;
+}
+
+.card {
+  width: 19rem;
+  height: 28.5rem;
+  background: #e8d3ef;
+  border-radius: 1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.paragrafo{
+    display: flex;
+}
+
+/* Fundo azul quando for macho */
+.macho {
+  background: #44b7e0;
+}
+
+.cardImg {
+  position: relative;
+}
+
+.cardImg img {
+  width: 100%;
+  height: 20vh;
+  object-fit: cover;
+}
+
+.heartIcon{
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: white;
+  user-select: none;
+}
+
+/* Conteúdo */
+.cardContent {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.cardContent h1 {
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 2.6rem;
+  font-family: fonte-titulo;
+}
+
+/* Tag */
+.tag {
+    background: #f8e7ff;
+  padding: 0.2rem 0.6rem;
+  color: #333;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  font-family: Chewy;
+  font-weight: 900;
+} 
+
+.machoTag {
+  background: #a6dbfa;
+}
+
+/* Lista */
+.infos {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.btnVerPassaporte{
+  padding: 0.7rem 0rem;
+  border: none;
+  border-radius: 0.4rem;
+  background: #f8d38d;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnVerPassaporte:hover {
+  background: #eabf72;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.paragrafo p{
+    font-size: 1.3rem;
+}
+
+/* ----------------------------------------- */
+/* BOTÃO CADASTRAR PET                       */
+/* ----------------------------------------- */
+.cadastroWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.btnCadastrar {
+  background: #b94d9d;
+  color: white;
+  padding: 1rem 2.6rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-cadastrar:hover {
+  background: #8a346f;
+}
+
+/* ----------------------------------------- */
+/* MODAL PASSAPORTE                         */
+/* ----------------------------------------- */
+
+.modalPassaporte {
+  padding: 0.5rem;
+  color: #fff;
+  border-radius: 1rem;
+}
+
+.passportInfo .title {
+  font-size: 1.8rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+  color: black;
+  font-family: fonte-titulo;
+}
+
+p strong {
+  font-size: 1.1rem;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+.topName {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+  color: black;
+  font-family: fonte-titulo;
+}
+
+.topDetail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.topDetail .bi {
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: white;
+  user-select: none;
+}
+.close {
+  color: black;
+  cursor: pointer;
+  font-size: 3rem;
+  margin-top: 0.5rem;
+}
+
+.passportPhoto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.passportInfo {
+  background: #fff;
+  color: #000;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.detalhesPokemon[aria-hidden="true"] {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.detalhesPokemon[aria-hidden="false"] {
+  pointer-events: auto;
+  opacity: 1;
+  transition: opacity 0.35s ease;
+}
+
+.btnAdotar {
+  display: block;
+  margin: 0.5rem auto;
+  padding: 1rem 5rem;
+  border: none;
+  border-radius: 0.4rem;
+  background: #f8d38d;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btnAdotar:hover {
+  background: #eabf72;
+}
+
+@media (max-width: 1750px) {
+  .cards-wrapper {
+    gap: 2rem;
+  }
+
+  .cards-container {
+    width: auto;
+    align-items: center;
+  }
+
+  .card-content span {
+    font-size: 1.0rem;
+  }
+  .btn-ver-passaporte {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1435px) {
+  .cards-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .cards-container {
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .card {
+    width: 90%;
+    height: auto;
+  }
+
+  .card-img img {
+    height: auto;
+  }
+}
+
+
+/* Adocao.module.css */
+
+/* Overlay da Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Conteúdo da Modal */
+.modalContent {
+   background: #e8d3ef;
+ padding: 1rem;
+  border-radius: 1rem;
+  width: 60%;
+   max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+/* Botões de Fechar e Favoritar */
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeButton,
+.favoriteButton {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.modalImage {
+  width: 100%;
+  height: 15rem;
+  border-radius: 1rem;
+}
+
+.passportInfo {
+  text-align: left;
+  border-radius: 1rem;
+}
+
+/* Estilo do Card */
+.cardContent h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cardImg img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}

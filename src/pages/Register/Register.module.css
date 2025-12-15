@@ -1,0 +1,127 @@
+@font-face {
+  font-family: vaseline;
+  src: url(../../font/VaselineExtra.ttf);
+}
+
+.page {
+  background-image: url(./img/bg-index.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: white;
+  border: 6px solid #17ace3;
+  border-radius: 60px;
+  padding: 30px;
+  width: 700px;
+  text-align: center;
+  background-position: center;
+  background-size: 100%;
+}
+
+.logoOficial {
+  width: 130px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  color: #b94d9d;
+  margin-bottom: 30px;
+  font-family: vaseline;
+  font-size: 45px;
+  font-weight: 400;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  background-color: #a282bb;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  color: #fff;
+  margin-top: 10px;
+  width: 100%;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 8px #17ace3;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.ultimo-espaco {
+  height: 150px;
+  padding: 15px;
+  text-align: left;
+}
+
+small {
+  color: #555;
+  margin-top: 5px;
+  text-align: right;
+}
+
+.page button {
+  margin-top: 20px;
+  padding: 18px 0px;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  background-color: #b94d9d;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+  width: 50%;
+  align-self: center;
+  margin-left: 4rem;
+}
+
+button:hover {
+  background-color: #ec7be3;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.carregando {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+#mensagem {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+#contador{
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+input::placeholder{
+  font-weight: bold;
+  font-size: 1rem;
+}

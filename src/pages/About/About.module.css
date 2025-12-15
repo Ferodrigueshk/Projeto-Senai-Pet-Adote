@@ -1,0 +1,55 @@
+.page {
+  min-height: 80vh;
+  background-image: url("./img/bg-index.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main{
+    margin-top: 15vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+main h1{
+    font-size: 2.2rem;
+    color: #b94d9d;
+    font-family: fonte-titulo;
+    font-weight: 200;
+    margin-bottom: 2rem;
+}
+
+.texto2{
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+.texto2 div{
+    background: white;
+    border: 2px solid #b94d9d;
+    border-radius: 0.8rem;
+    padding: 2rem;
+    font-size: 1.4rem;
+    max-width: 500px;
+    font-weight: 600;
+}
+
+.divulgue{
+    max-width: 1000px; 
+}
+
+.divulgue p {
+    font-size: 1.5rem;
+}
+
+.parceiros img{
+    border-radius: 1rem;
+    width: 10rem;
+}
+
+
